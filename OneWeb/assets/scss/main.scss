@@ -1,0 +1,544 @@
+@font-face {
+  src: url("assets/fonts/arkhip/Arkhip-Regular.ttf") format('truetype');
+  font-family: 'Arkhip', sans-serif;
+}
+
+@font-face {
+  src: url("assets/fonts/gilroy/Gilroy-Light.otf") format('truetype');
+  font-family: 'Gilroy', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 24px;
+
+}
+
+$arkhipFont: 'Arkhip', sans-serif;
+$gilroyFont: 'Gilroy', sans-serif;
+%userInput {
+  flex: 1;
+  border: none;
+  margin-left: 8px;
+  padding-left: 16px;
+  font-size: 30px;
+  line-height: 36px;
+  outline: none;
+  font-family: $gilroyFont;
+  border-bottom: 2px solid transparent;
+  background: {
+    image: url("../images/jpg/line.png");
+    repeat: no-repeat;
+    position-x: left;
+    position-y: bottom;
+    size: 90% 2px;
+    color: transparent;
+  };
+}
+
+%userLabel {
+  font-family: $gilroyFont;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 27px;
+}
+
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  background: transparent;
+
+}
+
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 60px 100px 174px 100px;
+  background: #F9F6F4;
+}
+
+header.header {
+  margin-bottom: 70px;
+
+  h1.title {
+    margin: 48px 0 53px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 58px;
+    width: 100%;
+
+    span {
+      font-family: $arkhipFont;
+      font-size: 48px;
+      line-height: 58px;
+      width: 199px;
+      color: #451F18;
+    }
+  }
+
+  form {
+    .form-control {
+      margin-bottom: 18px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      label {
+        @extend %userLabel;
+      }
+
+      input {
+        @extend %userInput;
+      }
+
+      #email {
+        background-size: 91.65%;
+      }
+    }
+  }
+
+}
+
+main {
+  .section-title {
+    font-family: $gilroyFont;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    margin-bottom: 16px;
+  }
+
+  .section-text {
+    width: 91%;
+    font-family: $gilroyFont;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #451F18;
+    margin-bottom: 22px;
+  }
+
+  section.skills-section {
+    margin-bottom: 50px;
+
+    .skills-form {
+      width: 100%;
+      display: flex;
+
+      .skill__list:last-child {
+        width: 50%;
+      }
+
+      .skill__list:first-child {
+        margin-right: 144px;
+
+        .form-control {
+          width: 476px;
+        }
+      }
+
+      .form-control {
+        margin-bottom: 16px;
+
+        label {
+          @extend %userLabel;
+          font-size: 26px;
+          display: flex;
+          align-items: center;
+          position: relative;
+          padding-left: 30px;
+          cursor: pointer;
+
+          &::before {
+            content: '';
+            background: {
+              image: url("../images/jpg/unchecked.png");
+              repeat: no-repeat;
+              position: center center;
+              size: cover;
+              color: transparent;
+            };
+            left: 0;
+            top: 0;
+            width: 22px;
+            height: 22px;
+            position: absolute;
+          }
+        }
+
+        input {
+          margin-right: 10px;
+          width: 24px;
+          height: 24px;
+        }
+
+        img {
+          display: none;
+        }
+
+        input[type='checkbox'] {
+          display: none;
+
+          &:checked + img {
+            display: block;
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            left: 1px;
+            top: -5px;
+
+          }
+        }
+
+        .css-libraries {
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 58%;
+            width: 58px;
+            height: 2px;
+            background: #000000;
+          }
+        }
+      }
+
+
+    }
+
+  }
+
+  section.range-knowledge-section {
+    .cards {
+      position: relative;
+      margin-bottom: 80px;
+
+      .card-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1360px;
+        margin: 0 auto;
+        position: relative;
+
+        .card {
+          text-align: center;
+          height: 175px;
+          width: calc(100% / 8);
+          cursor: pointer;
+
+          .card-head {
+            margin-bottom: 44px;
+            height: 45px;
+            transition: all ease-in-out .4s;
+            background: {
+              image: url("../images/jpg/faces/face-1.png");
+              repeat: no-repeat;
+              size: contain;
+              position: center center;
+              color: transparent;
+            };
+
+          }
+
+          .card-body {
+            position: relative;
+            height: 30px;
+
+            &::after {
+              content: '';
+              position: absolute;
+              left: 43%;
+              top: 50%;
+              width: 20px;
+              height: 2px;
+              background: {
+                image: url("../images/jpg/line.png");
+                repeat: no-repeat;
+                position: center center;
+                size: cover;
+              };
+              transform: rotate(90deg);
+            }
+          }
+
+          .card-footer {
+            font-family: $gilroyFont;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19px;
+          }
+
+          .face-4 {
+            background-image: url("../images/jpg/faces/face-4.png");
+          }
+
+          .face-4.active {
+            background-image: url("../images/jpg/faces/face-4_active.png");
+          }
+
+          .face-3 {
+            background-image: url("../images/jpg/faces/face-3.png");
+          }
+
+          .face-3.active {
+            background-image: url("../images/jpg/faces/face-3_active.png");
+          }
+
+          .face-2 {
+            background-image: url("../images/jpg/faces/face-2.png");
+          }
+
+          .face-2.active {
+            background-image: url("../images/jpg/faces/face-2_active.png");
+          }
+
+          .face-1.active {
+            background-image: url("../images/jpg/faces/face-1_active.png");
+          }
+        }
+
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 53%;
+          width: 100%;
+          height: 2px;
+          background: {
+            image: url("../images/jpg/line.png");
+            repeat: no-repeat;
+            position: center center;
+            size: cover;
+          };
+        }
+      }
+
+      #arrow {
+        position: absolute;
+        left: 5.2%;
+        top: 69px;
+        width: 24px;
+        height: 24px;
+        background: {
+          image: url("../images/jpg/arrow.png");
+          repeat: no-repeat;
+          position: center center;
+          size: cover;
+          color: transparent;
+        };
+        transition: left 0.3s ease;
+
+      }
+
+    }
+  }
+
+  section.future-plan-section {
+    margin-bottom: 80px;
+
+    .section__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @extend %userLabel;
+        font-size: 20px;
+
+        input[type="radio"] {
+          display: none;
+        }
+
+        .radio-icon,
+        .radio-icon-checked {
+          width: 24px;
+          height: 24px;
+          margin-right: 10px;
+          padding: 1px;
+        }
+
+
+        .radio-icon-checked {
+          display: none;
+        }
+
+        input[type="radio"]:checked ~ .radio-icon {
+          display: none;
+        }
+
+        input[type="radio"]:checked ~ .radio-icon-checked {
+          display: inline-block;
+        }
+      }
+
+
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+
+  main {
+    .skills-section {
+      .skills-form {
+        flex-direction: column;
+
+        .skill__list {
+          width: 100%;
+          margin-right: 0 !important;
+
+          .form-control {
+            width: 100% !important;
+          }
+        }
+
+      }
+    }
+
+    section.future-plan-section {
+      .section__content {
+        flex-direction: column;
+        align-items: start;
+      }
+    }
+  }
+}
+
+footer.footer {
+  .form-control {
+    margin-bottom: 75px;
+    display: flex;
+
+    label {
+      @extend %userLabel;
+      display: flex;
+    }
+
+    input {
+      @extend %userInput;
+    }
+  }
+
+}
+
+@media (max-width: 480px) {
+  h2.section-title {
+    font-size: 20px !important;
+  }
+  header.header {
+    h1.title {
+      span {
+        font-size: 32px;
+      }
+    }
+
+    form {
+      .form-control {
+        width: 100%;
+        margin-bottom: 16px;
+
+        label {
+
+          font-size: 14px;
+          line-height: 24px;
+        }
+
+        input {
+          font-size: 16px;
+          line-height: 24px;
+          margin-left: 3px;
+          padding-left: 6px;
+          background: {
+            position-y: 85%;
+          };
+        }
+      }
+    }
+  }
+  main {
+    .skills-section {
+      .skills-form {
+        .skill__list {
+          .form-control {
+            label {
+              font-size: 14px;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+    }
+
+    section.range-knowledge-section {
+      .cards {
+        .card-container {
+          .card {
+            .card-footer {
+              font-size: 14px;
+            }
+
+            .card-body {
+              &::after {
+                left: 32%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  main section.range-knowledge-section .cards .card-container .card .card-footer {
+    font-size: 9px;
+  }
+  header.header form .form-control input {
+    font-size: 12px;
+  }
+  footer.footer .form-control {
+    input {
+      font-size: 20px;
+      margin: 20px 0 0 0;
+      padding: 0;
+    }
+   
+
+    label {
+      font-size: 20px;
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+}
+
+
+
+

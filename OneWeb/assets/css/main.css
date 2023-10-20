@@ -1,0 +1,388 @@
+@font-face {
+  src: url("assets/fonts/arkhip/Arkhip-Regular.ttf") format("truetype");
+  font-family: "Arkhip", sans-serif;
+}
+@font-face {
+  src: url("assets/fonts/gilroy/Gilroy-Light.otf") format("truetype");
+  font-family: "Gilroy", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+footer.footer .form-control input, header.header form .form-control input {
+  flex: 1;
+  border: none;
+  margin-left: 8px;
+  padding-left: 16px;
+  font-size: 30px;
+  line-height: 36px;
+  outline: none;
+  font-family: "Gilroy", sans-serif;
+  border-bottom: 2px solid transparent;
+  background-image: url("../images/jpg/line.png");
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: bottom;
+  background-size: 90% 2px;
+  background-color: transparent;
+}
+
+footer.footer .form-control label, main section.future-plan-section .section__content label, main section.skills-section .skills-form .form-control label, header.header form .form-control label {
+  font-family: "Gilroy", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 27px;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  background: transparent;
+}
+
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 60px 100px 174px 100px;
+  background: #F9F6F4;
+}
+
+header.header {
+  margin-bottom: 70px;
+}
+header.header h1.title {
+  margin: 48px 0 53px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 58px;
+  width: 100%;
+}
+header.header h1.title span {
+  font-family: "Arkhip", sans-serif;
+  font-size: 48px;
+  line-height: 58px;
+  width: 199px;
+  color: #451F18;
+}
+header.header form .form-control {
+  margin-bottom: 18px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+header.header form .form-control #email {
+  background-size: 91.65%;
+}
+
+main .section-title {
+  font-family: "Gilroy", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  margin-bottom: 16px;
+}
+main .section-text {
+  width: 91%;
+  font-family: "Gilroy", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #451F18;
+  margin-bottom: 22px;
+}
+main section.skills-section {
+  margin-bottom: 50px;
+}
+main section.skills-section .skills-form {
+  width: 100%;
+  display: flex;
+}
+main section.skills-section .skills-form .skill__list:last-child {
+  width: 50%;
+}
+main section.skills-section .skills-form .skill__list:first-child {
+  margin-right: 144px;
+}
+main section.skills-section .skills-form .skill__list:first-child .form-control {
+  width: 476px;
+}
+main section.skills-section .skills-form .form-control {
+  margin-bottom: 16px;
+}
+main section.skills-section .skills-form .form-control label {
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+main section.skills-section .skills-form .form-control label::before {
+  content: "";
+  background-image: url("../images/jpg/unchecked.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: transparent;
+  left: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+}
+main section.skills-section .skills-form .form-control input {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+}
+main section.skills-section .skills-form .form-control img {
+  display: none;
+}
+main section.skills-section .skills-form .form-control input[type=checkbox] {
+  display: none;
+}
+main section.skills-section .skills-form .form-control input[type=checkbox]:checked + img {
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 1px;
+  top: -5px;
+}
+main section.skills-section .skills-form .form-control .css-libraries::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 58%;
+  width: 58px;
+  height: 2px;
+  background: #000000;
+}
+main section.range-knowledge-section .cards {
+  position: relative;
+  margin-bottom: 80px;
+}
+main section.range-knowledge-section .cards .card-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  position: relative;
+}
+main section.range-knowledge-section .cards .card-container .card {
+  text-align: center;
+  height: 175px;
+  width: 12.5%;
+  cursor: pointer;
+}
+main section.range-knowledge-section .cards .card-container .card .card-head {
+  margin-bottom: 44px;
+  height: 45px;
+  transition: all ease-in-out 0.4s;
+  background-image: url("../images/jpg/faces/face-1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  background-color: transparent;
+}
+main section.range-knowledge-section .cards .card-container .card .card-body {
+  position: relative;
+  height: 30px;
+}
+main section.range-knowledge-section .cards .card-container .card .card-body::after {
+  content: "";
+  position: absolute;
+  left: 43%;
+  top: 50%;
+  width: 20px;
+  height: 2px;
+  background-image: url("../images/jpg/line.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transform: rotate(90deg);
+}
+main section.range-knowledge-section .cards .card-container .card .card-footer {
+  font-family: "Gilroy", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+}
+main section.range-knowledge-section .cards .card-container .card .face-4 {
+  background-image: url("../images/jpg/faces/face-4.png");
+}
+main section.range-knowledge-section .cards .card-container .card .face-4.active {
+  background-image: url("../images/jpg/faces/face-4_active.png");
+}
+main section.range-knowledge-section .cards .card-container .card .face-3 {
+  background-image: url("../images/jpg/faces/face-3.png");
+}
+main section.range-knowledge-section .cards .card-container .card .face-3.active {
+  background-image: url("../images/jpg/faces/face-3_active.png");
+}
+main section.range-knowledge-section .cards .card-container .card .face-2 {
+  background-image: url("../images/jpg/faces/face-2.png");
+}
+main section.range-knowledge-section .cards .card-container .card .face-2.active {
+  background-image: url("../images/jpg/faces/face-2_active.png");
+}
+main section.range-knowledge-section .cards .card-container .card .face-1.active {
+  background-image: url("../images/jpg/faces/face-1_active.png");
+}
+main section.range-knowledge-section .cards .card-container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 53%;
+  width: 100%;
+  height: 2px;
+  background-image: url("../images/jpg/line.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+main section.range-knowledge-section .cards #arrow {
+  position: absolute;
+  left: 5.2%;
+  top: 69px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/jpg/arrow.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: transparent;
+  transition: left 0.3s ease;
+}
+main section.future-plan-section {
+  margin-bottom: 80px;
+}
+main section.future-plan-section .section__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+main section.future-plan-section .section__content label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+main section.future-plan-section .section__content label input[type=radio] {
+  display: none;
+}
+main section.future-plan-section .section__content label .radio-icon,
+main section.future-plan-section .section__content label .radio-icon-checked {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  padding: 1px;
+}
+main section.future-plan-section .section__content label .radio-icon-checked {
+  display: none;
+}
+main section.future-plan-section .section__content label input[type=radio]:checked ~ .radio-icon {
+  display: none;
+}
+main section.future-plan-section .section__content label input[type=radio]:checked ~ .radio-icon-checked {
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+  main .skills-section .skills-form {
+    flex-direction: column;
+  }
+  main .skills-section .skills-form .skill__list {
+    width: 100%;
+    margin-right: 0 !important;
+  }
+  main .skills-section .skills-form .skill__list .form-control {
+    width: 100% !important;
+  }
+  main section.future-plan-section .section__content {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+footer.footer .form-control {
+  margin-bottom: 75px;
+  display: flex;
+}
+footer.footer .form-control label {
+  display: flex;
+}
+@media (max-width: 480px) {
+  h2.section-title {
+    font-size: 20px !important;
+  }
+  header.header h1.title span {
+    font-size: 32px;
+  }
+  header.header form .form-control {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  header.header form .form-control label {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  header.header form .form-control input {
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 3px;
+    padding-left: 6px;
+    background-position-y: 85%;
+  }
+  main .skills-section .skills-form .skill__list .form-control label {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  main section.range-knowledge-section .cards .card-container .card .card-footer {
+    font-size: 14px;
+  }
+  main section.range-knowledge-section .cards .card-container .card .card-body::after {
+    left: 32%;
+  }
+}
+@media (max-width: 320px) {
+  main section.range-knowledge-section .cards .card-container .card .card-footer {
+    font-size: 9px;
+  }
+  header.header form .form-control input {
+    font-size: 12px;
+  }
+  footer.footer .form-control input {
+    font-size: 20px;
+    margin: 20px 0 0 0;
+    padding: 0;
+  }
+  footer.footer .form-control label {
+    font-size: 20px;
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
